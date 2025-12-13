@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learning 365 — Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <!-- HAMBURGER -->
+  <button id="hamburger" class="hamburger">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- OVERLAY -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+      <button id="closeSidebar" class="close-btn">✕</button>
+
+      <div class="brand">
+        <h2>LEARNING 365</h2>
+        <p>Learn. Grow. Excel.</p>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html" class="menu-item active">📊 Dashboard</a>
+        <a href="online-classes.html" class="menu-item">💻 Online Classes</a>
+        <a href="library.html" class="menu-item">📚 Library</a>
+        <a href="exam.html" class="menu-item">📝 Exam</a>
+        <a href="#notificationsSection" class="menu-item">🔔 Notifications</a>
+      </nav>
+
+      <a href="index.html" class="logout">🚪 Logout</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- CONTAINER WITH ANIMATED BORDER -->
+    <div class="ppt-slide animated-border">
+
+     <div class="welcome-box">
+  <h1 class="welcome-title">Hello, Learner ✌</h1>
+  <p class="welcome-subtitle">
+    ⬇️ All your updates appear below ⬇️
+  </p>
+</div>
+
+
+      <section id="notificationsSection" class="notifications">
+        <h2>Notifications</h2>
+        <ul id="notificationList"></ul>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

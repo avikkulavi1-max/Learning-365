@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning 365 | Exam</title>
+  <link rel="stylesheet" href="css/exam.css" />
+</head>
+<body>
+
+  <main class="exam-container">
+
+    <button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+
+    <h1>AI-Simulated Exam</h1>
+    <p class="subtitle">
+      Questions are generated automatically from library content
+    </p>
+
+    <div id="examBox" class="exam-box">
+      <button id="startExam" class="start-btn">Start Exam</button>
+    </div>
+
+    <section class="history">
+      <h2>Exam History</h2>
+      <ul id="historyList"></ul>
+    </section>
+
+  </main>
+
+  <script src="js/exam.js"></script>
+</body>
+</html>

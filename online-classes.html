@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning 365 | Online Classes</title>
+  <link rel="stylesheet" href="css/online-classes.css" />
+</head>
+<body>
+
+  <main class="classes-container">
+
+    <!-- BACK BUTTON -->
+    <button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+
+    <h1>Online Classes</h1>
+    <p class="subtitle">Attend live and scheduled sessions</p>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="empty-state">
+      <p>📭 No classes found</p>
+      <span>Add a class using the + button</span>
+    </div>
+
+    <!-- CLASS LIST -->
+    <div id="classList" class="class-list"></div>
+
+  </main>
+
+  <!-- FLOATING PLUS BUTTON -->
+  <button id="addClassBtn" class="add-btn">+</button>
+
+  <!-- ADD CLASS MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <h2>Add Online Class</h2>
+
+      <input type="text" id="classTitle" placeholder="Class Title" />
+      <input type="text" id="classTeacher" placeholder="Teacher Name" />
+      <input type="url" id="classLink" placeholder="Class Link" />
+
+      <!-- START TIME -->
+      <label class="schedule-label">Class Starting From</label>
+      <div class="time-row">
+        <input type="date" id="startDate" />
+        <input type="time" id="startTime" />
+        <select id="startMeridiem">
+          <option>AM</option>
+          <option>PM</option>
+        </select>
+      </div>
+
+      <!-- END TIME -->
+      <label class="schedule-label">Class Ending At</label>
+      <div class="time-row">
+        <input type="date" id="endDate" />
+        <input type="time" id="endTime" />
+        <select id="endMeridiem">
+          <option>AM</option>
+          <option>PM</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button id="saveClass">Save</button>
+        <button id="closeModal" class="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/online-classes.js"></script>
+</body>
+</html>

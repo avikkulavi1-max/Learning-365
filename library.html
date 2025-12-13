@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning 365 | Library</title>
+  <link rel="stylesheet" href="css/library.css" />
+</head>
+<body>
+
+  <main class="library-container">
+
+    <!-- BACK BUTTON -->
+    <button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+
+    <h1>Library</h1>
+    <p class="subtitle">Access notes, PDFs, and learning resources</p>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="empty-state">
+      <p>📭 No resources found</p>
+      <span>Add resources using the + button</span>
+    </div>
+
+    <!-- RESOURCE LIST -->
+    <div id="resourceList" class="resource-list"></div>
+
+  </main>
+
+  <!-- FLOATING PLUS BUTTON -->
+  <button id="addResourceBtn" class="add-btn">+</button>
+
+  <!-- ADD RESOURCE MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <h2>Add Resource</h2>
+
+      <input type="text" id="resTitle" placeholder="Resource Title" />
+      <input type="text" id="resSubject" placeholder="Subject" />
+
+      <!-- BROWSE FILE -->
+      <input type="file" id="resFile" />
+
+      <div class="modal-actions">
+        <button id="saveResource">Save</button>
+        <button id="closeModal" class="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/library.js"></script>
+</body>
+</html>
