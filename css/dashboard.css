@@ -1,227 +1,113 @@
-/* ===================== */
-/* BODY */
-/* ===================== */
 body {
   margin: 0;
-  font-family: Inter, sans-serif;
-  background: linear-gradient(
-    180deg,
-    #f3f4f8 0%,
-    #d2c2f7 40%,
-    #a479e9 100%
-  );
+  font-family: Arial, sans-serif;
+  background: #e5e5e5;
 }
 
-
-/* ===================== */
-/* HAMBURGER WITH ANIMATED BORDER */
-/* ===================== */
-.hamburger {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  cursor: pointer;
-  z-index: 2000;
-
-  padding: 10px;
-  border-radius: 12px;
-  border: 3px solid transparent;
-
-  background:
-    linear-gradient(#111, #111) padding-box,
-    linear-gradient(
-      270deg,
-      #7c3aed,
-      #e90707,
-      #0ecdaa,
-      #7c3aed
-    ) border-box;
-
-  background-size: 100% 100%, 400% 400%;
-  background-position: 0 0, 0% 50%;
-
-  animation: borderMove 6s linear infinite;
-}
-
-.hamburger-line {
-  width: 26px;
-  height: 3px;
-  background: #fff;
-  display: block;
-  margin: 5px 0;
-}
-
-/* ===================== */
-/* OVERLAY */
-/* ===================== */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(139, 137, 137, 0.564);
-  display: none;
-  z-index: 1500;
-}
-
-.overlay.show {
-  display: block;
-}
-
-/* ===================== */
-/* SIDEBAR */
-/* ===================== */
+/* =========================
+   SIDEBAR
+========================= */
 .sidebar {
-  position: fixed;
-  left: -260px;
-  top: 0;
   width: 260px;
   height: 100vh;
-  background: #7c3aed;
+  background: #7b3fe4;
   color: white;
-  transition: left 0.3s ease;
-  z-index: 2000;
-}
-
-.sidebar.open {
-  left: 0;
-}
-
-.sidebar-inner {
   padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.brand {
-  margin: 20px 0;
-}
-
-.menu-item {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 12px 0;
-}
-
-.logout {
-  margin-top: 30px;
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-/* ===================== */
-/* MAIN CONTENT */
-/* ===================== */
-main {
-  padding: 80px 30px;
-}
-
-/* ===================== */
-/* CONTAINER WITH ANIMATED BORDER */
-/* ===================== */
-.ppt-slide {
-  max-width: 1800px;
-  margin: auto;
-  padding: 40px;
-  min-height: 800px;
-
-  border: 6px solid transparent;
-  border-radius: 18px;
-
-  background:
-    linear-gradient(#f5f9f6, #a279e3) padding-box,
-    linear-gradient(
-      270deg,
-      #7c3aed,
-      #e90707,
-      #0ecdaa,
-      #7c3aed
-    ) border-box;
-
-  background-size: 100% 100%, 400% 400%;
-  background-position: 0 0, 0% 50%;
-
-  animation: borderMove 10s linear infinite;
-
-  box-shadow:
-    inset 0 0 0 2px rgba(255,255,255,0.4),
-    0 10px 30px rgba(253, 251, 251, 0.25);
-}
-
-/* ===================== */
-/* BORDER ANIMATION */
-/* ===================== */
-@keyframes borderMove {
-  0%   { background-position: 0 0, 0% 50%; }
-  50%  { background-position: 0 0, 100% 50%; }
-  100% { background-position: 0 0, 0% 50%; }
-}
-
-/* ===================== */
-/* WELCOME TEXT */
-/* ===================== */
-.welcome-box {
-  text-align: center;
+.tagline {
+  font-size: 14px;
+  opacity: 0.8;
   margin-bottom: 30px;
-  color: #050505;
 }
 
-.welcome-title {
-  animation: fadeSlideDown 1.2s ease forwards;
-}
-
-.welcome-subtitle {
-  opacity: 0;
-  animation: fadeSlideUp 1.2s ease forwards;
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===================== */
-/* NOTIFICATIONS */
-/* ===================== */
-.notifications ul {
+/* =========================
+   NAVIGATION
+========================= */
+.nav-links {
   list-style: none;
   padding: 0;
 }
 
-.notifications li {
-  background: rgba(255,255,255,0.95);
-  padding: 16px 18px;
+.nav-item {
+  margin: 12px 0;
+  border: 2px solid rgba(255, 255, 255, 0.35);
   border-radius: 12px;
-  margin-bottom: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.notifications small {
+.nav-item a {
   display: block;
-  color: #555;
-  margin-top: 6px;
+  padding: 14px 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hover animation */
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(6px);
+}
+
+/* Active / glowing */
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #fff;
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.6),
+    0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Glow pulse */
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  animation: glowPulse 1.5s infinite;
+}
+
+/* Logout special */
+.nav-item.logout {
+  border-color: rgba(255, 120, 120, 0.9);
+}
+
+.nav-item.logout:hover {
+  background: rgba(255, 120, 120, 0.25);
+}
+
+/* =========================
+   GLOW KEYFRAMES
+========================= */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px white;
+  }
+  50% {
+    box-shadow: 0 0 20px white;
+  }
+  100% {
+    box-shadow: 0 0 5px white;
+  }
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+.content {
+  margin-left: 280px;
+  padding: 40px;
 }
